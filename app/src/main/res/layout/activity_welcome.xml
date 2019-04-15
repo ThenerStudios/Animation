@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/welcome_to_vision"
@@ -38,47 +38,19 @@
         app:layout_constraintTop_toBottomOf="@+id/Welcome"
         app:srcCompat="@drawable/vision" />
 
-    <TextView
-        android:id="@+id/poweredBy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/powered_by"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:fontFamily="@font/lato"
-        app:layout_constraintEnd_toStartOf="@+id/ia"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <TextView
-        android:id="@+id/ia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/ai"
-        android:textColor="@color/appColor"
-        android:textSize="26sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/thenername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="64dp"
         android:text="@string/thener_studio"
-        android:textSize="25sp"
         android:textColor="@color/appColor"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -92,25 +64,87 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/thenername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/thener"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/thener" />
 
     <TextView
         android:id="@+id/DesignedBy"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/lato"
         android:text="@string/designed_by"
+        android:textAlignment="center"
         android:textColor="@color/text"
-        android:textSize="30sp"
+        android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/ThenerLogo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="jelly_bean" />
+
+    <Button
+        android:id="@+id/Proceed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/buttons"
+        android:text="@string/proceed"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/poweredByAi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <TextView
+            android:id="@+id/poweredBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/powered_by"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textAlignment="viewEnd"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:layout_weight="1"
+            app:fontFamily="@font/lato"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/ia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ai"
+            android:layout_weight="1"
+            android:textColor="@color/appColor"
+            android:textSize="26sp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

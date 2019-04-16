@@ -7,4 +7,7 @@
     <string name="thener_studio">Thener Studio</string>
     <string name="designed_by">Designed By</string>
     <string name="proceed">Proceed</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="send_verification">send verification</string>
+    <string name="a_verification_code_will_be_sent_to_your_phone_n_number">A Verification Code Will Be Sent to Your Phone   Number</string>
 </resources>
